@@ -6,6 +6,16 @@ import { useEffect, useState } from "react";
 
 
 function App() {
+  const [load , setload] = useState(true)
+  const spiner = document.getElementById("centerLoad")
+
+  if(spiner){
+  setTimeout(() => {
+      spiner.style.display="none"
+      setload(false)
+    }, 2000);
+  }
+
   const [user , setuser] = useState()
   useEffect(_=> { localStorage.getItem("facebook") ? setuser(JSON.parse(localStorage.getItem("facebook"))) : setuser(null) },[])
  
@@ -16,7 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      {
+        !load && <BrowserRouter>
         <Routes> 
           
           <Route path="/"  element={<LoginPage/>} />
@@ -32,6 +43,8 @@ function App() {
           {/* <Route path="/profile/:userId"  element={<ProfilePage />} /> */}
         </Routes>
       </BrowserRouter>
+      }
+      
       
 
     </div>

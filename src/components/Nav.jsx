@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { GetUser } from '../hooks/user/H_Getuser';
 import { baseImg } from '../config/baseURL';
@@ -17,7 +17,7 @@ const Nav = () => {
     return (
     <div className='nav'  >
         <div className="left">
-            <img style={{cursor:"pointer"}} src="./images/facebook1.png" alt="" />
+            <NavLink to="/home" ><img style={{cursor:"pointer"}} src="./images/facebook1.png" alt="" /></NavLink>
             <div>
             <i className="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder='Search ..' />
