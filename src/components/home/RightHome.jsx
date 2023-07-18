@@ -5,11 +5,10 @@ import { GetIdUser, SetFollow } from '../../toolkit/S_Auth'
 import { baseImg, baseUrl } from '../../config/baseURL'
 import { success } from '../notification'
 
-const RightHome = ({anyChange , setanyChange}) => {
+const RightHome = ({anyChange , setanyChange , MyData}) => {
   const dispatch = useDispatch()
   const [user] = GetUser()
-  useEffect(_=>{if(user?._id) dispatch(GetIdUser(user?._id))} ,[user , anyChange])
-  const MyData = useSelector(e=>e.S_Auth.user )
+
 
 
   const handleFirend = async(e)=>{

@@ -14,6 +14,7 @@ const Nav = () => {
       localStorage.removeItem('facebook')
       window.location.href = "/"
     }
+
     return (
     <div className='nav'  >
         <div className="left">

@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import {  SetComment, SetLike } from '../../toolkit/S_Posts'
 import { Error, success } from '../notification'
 import EditePost from './EditePost'
-import { baseUrl } from '../../config/baseURL'
+import { baseImg, baseUrl } from '../../config/baseURL'
 
 
 const AddComment = ({showComment , setshowComment ,e}) => {
-  const baseImg = "http://127.0.0.1:4000/posts/"
   const [comment , setcomment] = useState("")
   const dispatch = useDispatch()
 

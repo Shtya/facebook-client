@@ -675,6 +675,7 @@ a {
 }
 .Page_Home .home .LeftHome {
   flex: 1;
+  max-width: 266px;
 }
 @media (max-width: 700px) {
   .Page_Home .home .LeftHome {
@@ -812,6 +813,7 @@ a {
 }
 .Page_Home .home .Home {
   flex: 2;
+  max-width: 650px;
 }
 .Page_Home .home .Home .add-post {
   display: flex;
@@ -2445,13 +2447,13 @@ a {
   font-size: 20px;
 }
 
-bodY {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.center {
+.centerLoad {
   height: 100vh;
   display: flex;
   justify-content: center;

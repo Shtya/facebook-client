@@ -676,7 +676,7 @@ a{text-decoration: none;}
             min-height: 100vh;
             .LeftHome{
                 flex: 1;
-                
+                max-width: 266px;
                 @media (max-width:700px) {
                     display: none;
                 }
@@ -818,6 +818,7 @@ a{text-decoration: none;}
 
             .Home{
                 flex: 2;
+                max-width: 650px;
                 // margin-right: 40px;
                 // .stories{   
                 //     padding: 10px;             
@@ -2625,12 +2626,12 @@ a{text-decoration: none;}
 
 
 
-bodY {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  .center {
+  .centerLoad {
     height: 100vh;
     display: flex;
     justify-content: center;
