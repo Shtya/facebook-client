@@ -6,8 +6,7 @@ import { success } from '../notification'
 import EditePost from './EditePost'
 import { baseImg, baseUrl } from '../../config/baseURL'
 import AddComment from './AddComment'
-import {format} from "timeago.js"
-
+// import {format} from "timeago.js"
 
 const Posts = ({e}) => {
   const dispatch = useDispatch()
@@ -47,7 +46,7 @@ const Posts = ({e}) => {
                 <div className="content"><img className='custom' src={`${baseImg}${e?.user?.profilePicture}`} /></div>
                 <div className="about">
                     <h1>{e?.user?.firstname}</h1>
-                    <div><span>{format(e?.createdAt)} </span>  <i className="fa-solid fa-earth-americas"></i></div>
+                    <div><span>{e?.createdAt} </span>  <i className="fa-solid fa-earth-americas"></i></div>
                 </div>
             </div>
 

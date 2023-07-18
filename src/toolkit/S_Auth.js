@@ -1,6 +1,6 @@
 import { createAsyncThunk , createSlice} from "@reduxjs/toolkit"
 const config = {headers: {"Content-Type": "multipart/form-data" }}
-import {baseUrl, reqSend} from "../config/baseURL"
+import {baseUrl} from "../config/baseURL"
 
 export const PostLogin  = createAsyncThunk("Login",async(data)=>{
   return baseUrl.post( "/api/v1/auth/login", data  ).then(res=> res.data).catch(err=> err.response.data)
